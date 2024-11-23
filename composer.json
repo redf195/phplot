@@ -1,6 +1,6 @@
 {
-    "name": "phplot/phplot",
-    "description": "PHP graph library for dynamic scientific, business, and stock-market charts and graphs.",
+    "name": "redf195/phplot",
+    "description": "Fork PHP graph library for dynamic scientific, business, and stock-market charts and graphs.",
     "type": "library",
     "require": {
         "ext-gd": "*"
