@@ -7774,11 +7774,11 @@ class phplot
                 ImageRectangle($this->img, $x1, $y1, $x2, $y2, $color);
                 break;
             case 'home': /* As in: "home plate" (baseball), also looks sort of like a house. */
-                $arrpoints = array($x1, $y2, $x2, $y2, $x2, $y, $x, $y1, $x1, $y);
-                ImageFilledPolygon($this->img, $arrpoints, 5, $color);
+                $arrpoints = array((int)$x1,(int) $y2,(int) $x2, (int)$y2, (int)$x2, (int)$y, (int)$x, (int)$y1, (int)$x1, (int)$y);
+                ImageFilledPolygon($this->img, $arrpoints, $color);
                 break;
             case 'up':
-                ImagePolygon($this->img, array($x, $y1, $x2, $y2, $x1, $y2), 3, $color);
+                ImagePolygon($this->img, array((int)$x, (int)$y1, (int)$x2, (int)$y2, (int)$x1, (int)$y2),$color);
                 break;
             case 'down':
                 ImagePolygon($this->img, array($x, $y2, $x1, $y1, $x2, $y1), 3, $color);
