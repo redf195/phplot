@@ -7733,23 +7733,23 @@ class phplot
                 break;
             case 'diamond':
                 $arrpoints = array((int)$x1, (int)$y, (int)$x, (int)$y1, (int)$x2, (int)$y, (int)$x, (int)$y2);
-                ImageFilledPolygon($this->img, $arrpoints, 4, $color);
+                ImageFilledPolygon($this->img, $arrpoints, $color);
                 break;
             case 'triangle':
                 $arrpoints = array($x1, $y, $x2, $y, $x, $y2);
-                ImageFilledPolygon($this->img, $arrpoints, 3, $color);
+                ImageFilledPolygon($this->img, $arrpoints,  $color);
                 break;
             case 'trianglemid':
                 $arrpoints = array($x1, $y1, $x2, $y1, $x, $y);
-                ImageFilledPolygon($this->img, $arrpoints, 3, $color);
+                ImageFilledPolygon($this->img, $arrpoints, $color);
                 break;
             case 'yield':
                 $arrpoints = array($x1, $y1, $x2, $y1, $x, $y2);
-                ImageFilledPolygon($this->img, $arrpoints, 3, $color);
+                ImageFilledPolygon($this->img, $arrpoints, $color);
                 break;
             case 'delta':
                 $arrpoints = array((int)$x1, (int)$y2, (int)$x2, (int)$y2, (int)$x, (int)$y1);
-                ImageFilledPolygon($this->img, $arrpoints, 3, $color);
+                ImageFilledPolygon($this->img, $arrpoints, $color);
                 break;
             case 'star':
                 ImageLine($this->img, $x1, $y, $x2, $y, $color);
