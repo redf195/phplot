@@ -7520,10 +7520,10 @@ class phplot
                         // Draw color boxes:
                         ImageFilledRectangle(
                             $this->img,
-                            $dot_left_x,
-                            $y1,
-                            $dot_right_x,
-                            $y2,
+                            (int)$dot_left_x,
+                            (int)$y1,
+                            (int) $dot_right_x,
+                            (int) $y2,
                             $this->ndx_data_colors[$color_index]
                         );
                        // Draw a rectangle around the box, if enabled.
@@ -7533,7 +7533,7 @@ class phplot
                             } else {
                                 $color = $this->ndx_text_color;
                             }
-                            ImageRectangle($this->img, $dot_left_x, $y1, $dot_right_x, $y2, $color);
+                            ImageRectangle($this->img, (int) $dot_left_x, (int)$y1, (int)$dot_right_x, (int)$y2, $color);
                         }
                 }
                 if (++$color_index > $max_color_index) {
@@ -7732,7 +7732,7 @@ class phplot
                 ImageFilledEllipse($this->img, $x, $y, $point_size, $point_size, $color);
                 break;
             case 'diamond':
-                $arrpoints = array($x1, $y, $x, $y1, $x2, $y, $x, $y2);
+                $arrpoints = array((int)$x1, (int)$y, (int)$x, (int)$y1, (int)$x2, (int)$y, (int)$x, (int)$y2);
                 ImageFilledPolygon($this->img, $arrpoints, 4, $color);
                 break;
             case 'triangle':
@@ -7748,7 +7748,7 @@ class phplot
                 ImageFilledPolygon($this->img, $arrpoints, 3, $color);
                 break;
             case 'delta':
-                $arrpoints = array($x1, $y2, $x2, $y2, $x, $y1);
+                $arrpoints = array((int)$x1, (int)$y2, (int)$x2, (int)$y2, (int)$x, (int)$y1);
                 ImageFilledPolygon($this->img, $arrpoints, 3, $color);
                 break;
             case 'star':
